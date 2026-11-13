@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pinnacle Security Ltd - Muyenga, Makindye | 24/7 Guards, CCTV, Cash Escort</title><link rel="stylesheet" href="style.css">
 <style>
+:root{--bg:#ffffff;--card:#ffffff;--text:#0a1a2f}
+[data-theme="dark"]{--bg:#0a1a2f;--card:#132a45;--text:#ffffff}
+[data-theme="dark"] body{background:#0a1a2f;color:white}
+[data-theme="dark"] .card,[data-theme="dark"] .form-box,[data-theme="dark"] .map-card,[data-theme="dark"] .testi-card{background:#132a45;color:white}
+[data-theme="dark"] details{background:#132a45}
+[data-theme="dark"] details p,[data-theme="dark"] details ul,[data-theme="dark"] .testi-card p{color:#dbe4f0}
+[data-theme="dark"] .testi-card b{color:#f9c300}
 .auto-box{display:none;background:#e8f5e9;border:1px solid #28a745;padding:15px;border-radius:10px;margin-top:15px}
 .wa-btn{display:inline-block;background:#25D366;color:white;padding:10px 15px;border-radius:5px;text-decoration:none;margin:5px 5px 0 0;font-weight:bold}
 .mail-btn{display:inline-block;background:#007bff;color:white;padding:10px 15px;border-radius:5px;text-decoration:none;margin:5px 0 0 0;font-weight:bold}
@@ -38,9 +45,17 @@ details ul{margin:8px 0 0 18px;color:#475569;font-size:13.5px;line-height:1.7}
 .map-frame{width:100%;height:340px;border:0;border-radius:12px}
 .map-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .map-btns a{flex:1;text-align:center;padding:13px;border-radius:10px;text-decoration:none;font-weight:800;font-size:14px}
+.testimonials{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+@media(max-width:700px){.testimonials{grid-template-columns:1fr}}
+.testi-card{background:white;padding:20px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid #eef1f5}
+.testi-card p{color:#334155;font-size:13.5px;line-height:1.7}
+.testi-card b{color:#0a1a2f}
+.stars{color:#f9c300;font-size:16px}
+.theme-btn{background:#f9c300;color:#0a1a2f;border:none;padding:10px 16px;border-radius:999px;font-weight:800;cursor:pointer;font-size:14px;margin-top:10px}
+.wa-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.3);z-index:999}
 </style></head><body>
-<header><h1>PINNACLE <span>SECURITY LTD</span></h1><p>Licensed Private Security Company - Muyenga, Makindye, Kampala</p></header>
-<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#map">📍 Map / Muyenga</a><a href="#mission">Mission</a><a href="#jobs">Careers</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<header><h1>PINNACLE <span>SECURITY LTD</span></h1><p>Licensed Private Security Company - Muyenga, Makindye, Kampala</p><button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button></header>
+<nav><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#map">📍 Map / Muyenga</a><a href="#mission">Mission</a><a href="#testimonials">⭐ Reviews</a><a href="#jobs">Careers</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
 
 <section id="home" class="hero"><h2>24/7 Protection You Can Trust</h2><p>Guards, CCTV, Alarm Response, Cash Escort, Event Security in Muyenga, Makindye, Kampala, Wakiso, Entebbe & All Uganda</p><p>📞 0785 557 6219 | 📍 Muyenga, Makindye, Kampala</p>
 <div class="badge-row"><span>✅ Licensed & Vetted Guards</span><span>✅ 24/7 Control Room</span><span>✅ Fast Response</span><span>✅ Affordable Prices</span></div><br>
@@ -122,6 +137,16 @@ details ul{margin:8px 0 0 18px;color:#475569;font-size:13.5px;line-height:1.7}
 <div class="form-box"><form onsubmit="saveForm(event,'pinnacle_feedback','msg6','Feedback')"><label>Your Name</label><input required><label>Rating</label><select><option>⭐⭐⭐⭐⭐ Excellent</option><option>⭐⭐⭐⭐ Good</option><option>⭐⭐⭐ Average</option><option>⭐ Poor</option></select><label>Your Feedback</label><textarea required placeholder="Tell us how we did"></textarea><button class="btn">SEND FEEDBACK</button></form><div id="msg6"></div></div>
 </div></section>
 
+<section id="testimonials"><h2>⭐ What Our Clients Say</h2>
+<div class="testimonials">
+<div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Pinnacle guards our home in Muyenga. Very disciplined, always on time. I sleep in peace now."</p><b>- John Kato, Muyenga Homeowner</b></div>
+<div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"They handle our cash escort every Friday. Professional, armed, on time. Highly trusted."</p><b>- Mary Nakato, Supermarket Owner, Makindye</b></div>
+<div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Installed CCTV for our school. We can watch from phone. Fast response when alarm rings."</p><b>- Pastor David, School Director, Kansanga</b></div>
+<div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Event security for our wedding was perfect. Crowd control, parking, everything organised."</p><b>- Sarah & Daniel, Wedding Clients, Munyonyo</b></div>
+<div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"I applied for a job, they called me in 2 days. Training was free, now I am a supervisor."</p><b>- Moses O., Guard Turned Supervisor</b></div>
+<div class="testi-card"><div class="stars">⭐⭐⭐⭐⭐</div><p>"Alarm rang at 2am, Pinnacle team came in 15 minutes. They saved our shop."</p><b>- Ahmed K., Shop Owner, Kampala CBD</b></div>
+</div></section>
+
 <section id="faq"><h2>❓ Frequently Asked Questions - Click To Expand</h2><div class="card">
 <details><summary>How much does a guard cost per month?</summary><p>Price depends on location, day/night, armed/unarmed, and number of guards. A single day guard in Kampala is affordable and we give a written quote after a FREE site visit. Fill the <b>Free Quote form</b> above and we will call you with exact price - no hidden charges.</p></details>
 <details><summary>Are your guards trained and vetted?</summary><p>Yes. Every guard is police-vetted, has a valid NIN, is trained in guarding, customer care, first aid, fire safety and emergency response. Guards are supervised daily and replaced immediately if sick or absent.</p></details>
@@ -142,6 +167,16 @@ details ul{margin:8px 0 0 18px;color:#475569;font-size:13.5px;line-height:1.7}
 <p style="font-size:12px;opacity:.8">Licensed Private Security Company - Muyenga, Makindye, Kampala, Uganda<br>© 2026 Pinnacle Security Ltd. All Rights Reserved. | Guards | CCTV | Alarms | Cash Escort | Event Security</p>
 </footer>
 
+<a class="wa-float" href="https://wa.me/256785576219?text=Hello%20Pinnacle,%20I%20need%20security" target="_blank">💬</a>
+<script>
+function toggleTheme(){
+  var html=document.documentElement;
+  var now=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',now);
+  localStorage.setItem('pinnacle-theme',now);
+}
+if(localStorage.getItem('pinnacle-theme')){document.documentElement.setAttribute('data-theme',localStorage.getItem('pinnacle-theme'));}
+</script>
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
